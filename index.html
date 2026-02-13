@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Coragem 🦄</title>
+    <style>
+        #imagem-susto {
+            display: none; 
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body style="background-color: #fff0f5; text-align: center; font-family: Arial; padding-top: 150px;">
+
+    <div id="conteudo-normal">
+        <h1>✨ Você ganhou um presente! ✨</h1>
+        <p>Clique no botão abaixo para abrir sua surpresa mágica.</p>
+        <br>
+        <button style="padding: 20px; font-size: 20px; cursor: pointer;" onclick="ativarSusto()">ABRIR PRESENTE 🎁</button>
+    </div>
+
+    <img id="imagem-susto" src="https://i.pinimg.com/736x/78/5e/6f/785e6fe1470966786e0ecff568833a2b.jpg">
+
+    <audio id="audio-susto">
+        <source src="https://actions.google.com/sounds/v1/horror/male_grunting_scream.ogg" type="audio/ogg">
+    </audio>
+
+    <script>
+        function ativarSusto() {
+            document.getElementById('audio-susto').play();
+            document.getElementById('imagem-susto').style.display = "block";
+            document.getElementById('conteudo-normal').style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
